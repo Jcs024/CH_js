@@ -1,0 +1,76 @@
+@use "../utilities/extends" as *;
+@use "../components/mq" as *;
+@use "../utilities/variables" as *;
+.header_nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $color_secundario;
+    height: 80px; 
+}
+
+.htl{
+    @extend %flexBasico;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 25px;
+}
+
+.nav_colapse{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo{
+    @extend %flexBasico;
+    margin: auto;
+    height: 50px;
+    width: 250px;
+    margin-left: 1em;
+    color: rgb(255, 255, 255);
+    background-color:$color_primario;
+    font-size: 35px;
+    font-weight: bold;
+    @include mediaquerymax800{
+        width: 100px;
+        font-size: medium;
+        transition-duration: 1s;
+    }
+}
+
+.navbox{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-toggler{
+    background-color: $color_terciario;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon{
+    background-color: rgb(97, 97, 97);
+    border-radius: 5px;
+}
+
+.navurl{
+    @extend %flexBasico;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    background-color: $color_secundario;
+    font-size: 17px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-left: 1em;
+}
+
+.navurl:hover{
+    background-color: $color_terciario;
+    color: rgb(0, 255, 255);
+    transition: 0.5s;
+}
+

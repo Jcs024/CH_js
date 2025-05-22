@@ -1,0 +1,6 @@
+@mixin flexAvanzado($displayf,$textalign,$justifyc,$aligni){
+    display: $displayf;
+    text-align: $textalign;
+    justify-content: $justifyc;
+    align-items: $aligni;
+}

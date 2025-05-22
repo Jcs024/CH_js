@@ -1,0 +1,15 @@
+@mixin mediaquerymax800{
+    @media screen and (max-width:800px){
+        @content;
+    }
+}
+@mixin mediaquerymin800{
+    @media (min-width: 800px){
+        @content;
+    }
+}
+@mixin mediaquery1024{
+    @media (min-width: 1024px){
+        @content;
+    }
+}

@@ -1,0 +1,75 @@
+@use "../utilities/extends" as *;
+@use "../components/mq" as *;
+@use "../utilities/variables" as *;
+sb{
+    @extend %flexBasico;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 50px;
+    .buscador {
+        @extend %flexBasico;
+        width: 80%;
+        max-width: 1200px;
+        height: 50px;
+        .search{
+            width: 100%;
+            height: 30px;
+            border-radius: 100px;
+            padding: 0rem 1.5rem;
+            
+        }
+    }
+}
+
+body{
+    background-color: $color_primario;
+    width: auto;
+    height: auto;
+    padding-top: 80px;
+}
+
+.main_index{
+    @extend %flexSinTexto;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    align-content: center;
+    @include mediaquerymin800{
+        align-items: stretch;
+    }
+    section h1{
+        color: rgb(255, 255, 255);
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        padding: 10px 10px;
+    }
+}
+.productos{
+    @extend %flexSinTexto;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 550px;
+    margin: auto;
+    background-color: $color_secundario;
+    padding: 30px 30px;
+    img{
+        max-width: 290px;
+        max-height: 163px;
+        width: 290px;
+        height: 163px;
+        @include mediaquerymin800{
+            max-width: 436px;
+            max-height: 245px;
+            width: 436px;
+            height: 245px;
+            margin: auto;
+        }
+    }
+}
+
+
+    

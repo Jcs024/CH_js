@@ -1,0 +1,86 @@
+@use "../utilities/extends" as *;
+@use "../components/mq" as *;
+@use "../utilities/variables" as *;
+.pie_pagina{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: $color_secundario;
+    margin-top: 30px;
+    .pp1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+        @include mediaquerymax800{
+            width: 90%;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 30px;
+            padding: 35px 0px;
+        }
+        .pp01{ 
+            h2{
+            color: rgb(255, 255, 255);
+            margin-bottom: 25px;
+            font-size: 20px;
+            }
+            p{
+                color: rgb(239, 239, 239);
+                margin-bottom: 10px;
+            }
+            figure{
+                width: 100%;
+                height: 100%;
+                @extend %flexBasico;
+                img{
+                    width: 200px;
+                    border-radius: 150px;
+                }
+            }
+            .red_social{
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: rgb(255, 255, 255);
+                    margin-right: 10px;
+                    background-color: $color_primario;
+                    text-align: center;
+                    transition: all 300ms ease;
+                    &:hover{
+                        color: rgb(0, 255, 255);
+                    }
+                    
+                }
+            } 
+        }
+    }
+    
+    .pp2{
+        background-color: $color_terciario;
+        padding: 15px 10px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        small{
+            font-size: 15px;
+        }
+    }
+}
+/* - CORRECION PIE DE PAGINA SOBRE NOSOTROS- */
+.pie_pagina_sn{
+    margin-top: 0px;
+}
+@include mediaquerymin800{    
+    .pie_pagina_contact{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
