@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.pie_pagina .pp1 .pp01 figure, .contenedor_intro, .contenedor_intro .intro_juegos, .main_juegos, .img_jg:hover .comprar, .img_jg h4, .img_jg p, .carousel, .texto_carousel:hover .comprar, sb, sb .buscador, .htl, .logo, .navurl {
+.pie_pagina .pp1 .pp01 figure, .contenedor_intro, .contenedor_intro .intro_juegos, .main_juegos, .img_jg:hover .comprar, .img_jg h4, .img_jg p, .carousel, .texto_carousel:hover .comprar, .sb, .sb .buscador, .htl, .logo, .navurl {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -147,21 +147,261 @@ hr {
   transition: 0.5s;
 }
 
-sb {
+/* Estilos para el carrito */
+.carrito-icono {
+  position: relative;
+}
+
+.carrito-contador {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.carrito-container {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  max-width: 90vw;
+  height: 100vh;
+  background-color: rgb(13, 32, 51);
+  border-left: 1px solid rgba(4, 217, 255, 0.3);
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.carrito-container.visible {
+  right: 0;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(4, 217, 255, 0.3);
+}
+.carrito-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrito-titulo {
+  font-size: 1.5rem;
+}
+
+.carrito-cerrar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  gap: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carrito-item-eliminar {
+  background: rgba(4, 217, 255, 0.71);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.carrito-item-info h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: rgba(4, 217, 255, 0.9);
+}
+
+.carrito-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.carrito-item-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carrito-item-precio {
+  margin: 0;
+  font-weight: bold;
+}
+
+.carrito-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  padding-top: 15px;
+  text-align: right;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carrito-totales > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.carrito-vacio {
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 20px 0;
+}
+
+.carrito-cupon {
+  display: flex;
+  margin-top: 10px;
+}
+
+.carrito-cupon-input {
+  flex: 1;
+  background-color: rgb(10, 20, 29);
+  border: 1px solid rgba(4, 217, 255, 0.3);
+  color: white;
+  border-radius: 4px 0 0 4px;
+}
+
+.carrito-cupon-boton {
+  background-color: rgba(4, 217, 255, 0.71);
+  border: none;
+  color: white;
+  padding: 0 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.carrito-body {
+  padding: 15px 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.cantidad-btn {
+  background-color: rgb(10, 26, 42);
+  border: none;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrito-descuento-section {
+  margin: 20px 0;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.codigos-disponibles {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carrito-resumen {
+  margin-top: 20px;
+}
+
+.carrito-comprar-btn {
+  background-color: rgba(4, 217, 255, 0.71);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carrito-comprar-btn:hover {
+  background-color: rgba(4, 180, 255, 0.9);
+}
+
+.alerta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.alerta.exito {
+  background-color: #4CAF50;
+}
+
+.alerta.error {
+  background-color: #f44336;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.sb {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
   width: 100%;
-  height: 50px;
+  height: 40px;
 }
-sb .buscador {
+.sb .buscador {
   width: 80%;
   max-width: 1200px;
-  height: 50px;
+  height: 40px;
 }
-sb .buscador .search {
+.sb .buscador .search {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border-radius: 100px;
   padding: 0rem 1.5rem;
 }
@@ -215,21 +455,6 @@ body {
     height: 245px;
     margin: auto;
   }
-}
-
-.explicacionConsola {
-  margin: auto;
-  width: 100%;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-}
-.explicacionConsola p {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-.explicacionConsola h2 {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
 }
 
 .contenedor_intro {
@@ -556,6 +781,58 @@ body {
 }
 .texto_carousel:hover .precio {
   display: none;
+}
+
+.modal-content {
+  background-color: rgb(10, 20, 29);
+  color: white;
+  border-radius: 12px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgb(10, 20, 29);
+  background-color: rgb(13, 32, 51);
+}
+
+.modal-title {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-body img {
+  max-height: 200px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-footer {
+  border-top: 1px solid rgb(10, 20, 29);
+  background-color: rgb(13, 32, 51);
+  justify-content: center;
+}
+
+.modal-footer .btn {
+  min-width: 120px;
+  margin: 0 10px;
+  padding: 8px 20px;
+  font-weight: 600;
+}
+
+#modalGlobalAddBtn {
+  background-color: rgb(10, 20, 29);
+  border-color: rgb(10, 20, 29);
+}
+
+#modalGlobalAddBtn:hover {
+  background-color: rgba(4, 217, 255, 0.71);
 }
 
 .pie_pagina {

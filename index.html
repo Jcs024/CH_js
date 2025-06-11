@@ -32,30 +32,15 @@
                   <a class="nav-link navurl" href="#">Tarjetas</a>
                   <a class="nav-link navurl" href="#">Sobre Nosotros</a>
                   <a class="nav-link navurl" href="#">Contactanos</a>
+                  <a class="nav-link navurl carrito-icono" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="carrito-contador">0</span>
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
     </header>
-    <div class="explicacionConsola">
-      <h2>Simulador de Tienda de Videojuegos</h2>
-      <p>
-        Este simulador permite explorar un catálogo de juegos, buscar productos específicos,
-        agregarlos a un carrito de compras y aplicar códigos de descuento. La interacción
-        principal se realiza a través de la consola JavaScript y cuadros de diálogo como
-        prompt, confirm y alert.
-      </p>
-      <p>
-        Las funciones principales incluyen: agregar juegos al carrito con agregarAlCarrito(), eliminar elementos del carrito con eliminarDelCarrito(), ver el resumen del
-        carrito con verCarrito(), aplicar descuentos aplicarDescuento(), buscar productos con  buscarPorConsola() y finalmente ver todo el cátalgo disponible con mostrarCatalogoConsola(). 
-      </p>
-      <p>
-          Los códigos de descuento son: 
-      </p>
-      <p>GAMER10 para un 10% de descuento</p> 
-      <p>WELCOME15 para un 15% de descuento</p>
-      <p>SUMMER25 para un 25% de descuento</p>
-    </div>
     <section class="contenedor_intro">      
         <section class="intro_juegos">
             <div class="texto_intro">
@@ -72,7 +57,6 @@
         </section>
     </section>
     <main class="main_juegos">
-        <!-- Tengo que hacerlo con tablas -->
         <section class="prod_juegos" id="contenedor-juegos">
           <h2>Todos los juegos</h2>
         </section>        
@@ -115,23 +99,25 @@
           </div>
           </section>
           
-        </main>
-        <!-- Modal reutilizable -->
-        <div class="modal fade" id="modalGlobal" tabindex="-1" aria-labelledby="modalGlobalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalGlobalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-              </div>
-              <div class="modal-body" id="modalGlobalBody"></div>
-              <div class="modal-footer">
-                <a href="#" class="btn btn-primary" id="modalGlobalLink">Sí, comprar</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              </div>
-            </div>
+    </main>
+    <div class="modal fade" id="modalGlobal" tabindex="-1" aria-labelledby="modalGlobalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGlobalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalGlobalImage" src="" alt="" class="img-fluid">
+            <p id="modalGlobalText"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="modalGlobalAddBtn">Agregar al carrito</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </div>
+      </div>
+    </div>
 
         <footer class="pie_pagina">
           <!-- pp1 (pie de página 1) -->

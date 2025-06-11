@@ -42,7 +42,7 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
           <div class="carousel-caption d-md-block texto_carousel">
             <h5>${juego.titulo}</h5>
             <p class="precio">${juego.precio} USD</p>
-            <p class="comprar">COMPRAR</p>
+            <p class="comprar" data-titulo="${juego.titulo}">COMPRAR</p>
           </div>
         </a>
       </div>
@@ -56,3 +56,4 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
 
 carouseles.forEach(generarCarrusel);
 
+window.carouseles = carouseles;
