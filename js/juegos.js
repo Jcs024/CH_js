@@ -76,7 +76,7 @@ const juegos = [
     }
 ];
 
-// Función para renderizar juegos (¡ESTA ES LA QUE FALTABA!)
+// Función para renderizar juegos
 function renderizarJuegos(lista) {
   const contenedor = document.getElementById("contenedor-juegos");
   if (!contenedor) return;
@@ -170,7 +170,7 @@ function actualizarContadorCarrito() {
   carritoContador.style.display = totalItems > 0 ? 'block' : 'none';
 }
 
-// Función para renderizar el carrito (mejorada)
+// Función para renderizar el carrito
 function renderizarCarrito() {
   carritoContainer.innerHTML = `
     <div class="carrito-header">
@@ -492,7 +492,6 @@ carritoIcono.addEventListener('click', (e) => {
    INICIALIZACIÓN
    ————————————————————————————————————————————————————————————————————————————————————— */
 document.addEventListener("DOMContentLoaded", () => {
-  // Limpiar carrito de elementos inválidos
   carrito = carrito.filter(item => item && item.titulo && item.precio);
   localStorage.setItem('carrito', JSON.stringify(carrito));
   
