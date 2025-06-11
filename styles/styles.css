@@ -637,7 +637,7 @@ body {
 }
 @media (min-width: 1024px) {
   .img_jg:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 }
 @media (min-width: 1024px) {

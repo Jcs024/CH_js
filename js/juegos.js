@@ -9,7 +9,7 @@ const juegos = [
       link: ""
     },
     {
-      titulo: "God of War Ragnarök (PC) Código de Steam GLOBAL",
+      titulo: "God of War Ragnarok (PC) Código de Steam GLOBAL",
       precio: "50",
       imagen: "./img/2_3/img_juegos/gowr_2_3.jpg",
       link: ""
