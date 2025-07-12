@@ -1,23 +1,64 @@
-[{
+[
+  {
     "id": "carouselMenos5",
     "juegos": [
-      { "titulo": "Hollow Knight", "precio": "4.99", "imagen": "hollow_knight.jpg" },
-      { "titulo": "Stardew Valley", "precio": "4.99", "imagen": "stardew_valley.png" },
-      { "titulo": "Buckshot Roulette", "precio": "1.49", "imagen": "buckshot_roulette.jpg" },
-      { "titulo": "Content Warning", "precio": "4.49", "imagen": "content_warning.jpg" },
-      { "titulo": "Backrooms: Escape Together", "precio": "4.49", "imagen": "backrooms.jpg" }
+      {
+        "titulo": "Hollow Knight",
+        "precio": "4.99",
+        "imagen": "hollow_knight.jpg"
+      },
+      {
+        "titulo": "Stardew Valley",
+        "precio": "4.99",
+        "imagen": "stardew_valley.png"
+      },
+      {
+        "titulo": "Buckshot Roulette",
+        "precio": "1.49",
+        "imagen": "buckshot_roulette.jpg"
+      },
+      {
+        "titulo": "Content Warning",
+        "precio": "4.49",
+        "imagen": "content_warning.jpg"
+      },
+      {
+        "titulo": "Backrooms: Escape Together",
+        "precio": "4.49",
+        "imagen": "backrooms.jpg"
+      }
     ],
     "rutaImagen": "./assets/img/16_9/menos5usd/"
   },
   {
     "id": "carouselMenos10",
     "juegos": [
-      { "titulo": "The Headliners", "precio": "4.49", "imagen": "the_headliners.jpg" },
-      { "titulo": "Left 4 Dead 2", "precio": "5.79", "imagen": "left_4_dead_2.jpg" },
-      { "titulo": "Garry's Mod", "precio": "5.79", "imagen": "garrys_mod.jpg" },
-      { "titulo": "Dark Hours", "precio": "5.79", "imagen": "dark_hours.jpg" },
-      { "titulo": "Escape The Backrooms", "precio": "5.79", "imagen": "escape_the_backrooms.jpg" }
+      {
+        "titulo": "The Headliners",
+        "precio": "4.49",
+        "imagen": "the_headliners.jpg"
+      },
+      {
+        "titulo": "Left 4 Dead 2",
+        "precio": "5.79",
+        "imagen": "left_4_dead_2.jpg"
+      },
+      {
+        "titulo": "Garry's Mod",
+        "precio": "5.79",
+        "imagen": "garrys_mod.jpg"
+      },
+      {
+        "titulo": "Dark Hours",
+        "precio": "5.79",
+        "imagen": "dark_hours.jpg"
+      },
+      {
+        "titulo": "Escape The Backrooms",
+        "precio": "5.79",
+        "imagen": "escape_the_backrooms.jpg"
+      }
     ],
-   "rutaImagen": "./assets/img/16_9/menos10usd/"
+    "rutaImagen": "./assets/img/16_9/menos10usd/"
   }
 ]
