@@ -306,6 +306,15 @@
 .alerta.error {
   background-color: #f44336;
 }
+.carrito-vaciar-btn {
+  @extend .carrito-comprar-btn;
+  background-color: rgba(255, 82, 82, 0.8); // rojo suave
+  margin-top: 10px;
+
+  &:hover {
+    background-color: rgba(255, 82, 82, 1);
+  }
+}
 
 @keyframes slideIn {
   from { transform: translateX(100%); }

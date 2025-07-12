@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.pie_pagina .pp1 .pp01 figure, .contenedor_intro, .contenedor_intro .intro_juegos, .main_juegos, .img_jg:hover .comprar, .img_jg h4, .img_jg p, .carousel, .texto_carousel:hover .comprar, .sb, .sb .buscador, .htl, .logo, .navurl {
+.pie_pagina .pp1 .pp01 figure, .contenedor_intro, .contenedor_intro .intro_juegos, .main_juegos, .carousel, .texto_carousel:hover .comprar, .sb, .sb .buscador, .htl, .logo, .navurl {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -337,7 +337,7 @@ hr {
   margin-top: 20px;
 }
 
-.carrito-comprar-btn {
+.carrito-comprar-btn, .carrito-vaciar-btn {
   background-color: rgba(4, 217, 255, 0.71);
   color: white;
   border: none;
@@ -353,7 +353,7 @@ hr {
   gap: 8px;
 }
 
-.carrito-comprar-btn:hover {
+.carrito-comprar-btn:hover, .carrito-vaciar-btn:hover {
   background-color: rgba(4, 180, 255, 0.9);
 }
 
@@ -377,6 +377,14 @@ hr {
 
 .alerta.error {
   background-color: #f44336;
+}
+
+.carrito-vaciar-btn {
+  background-color: rgba(255, 82, 82, 0.8);
+  margin-top: 10px;
+}
+.carrito-vaciar-btn:hover {
+  background-color: rgb(255, 82, 82);
 }
 
 @keyframes slideIn {
@@ -544,17 +552,91 @@ body {
 }
 
 .prod_juegos {
-  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: auto;
-  width: 100%;
+  gap: 1rem;
+  padding: 2rem;
   max-width: 1200px;
-  max-height: auto;
+  background-color: rgb(10, 20, 29);
 }
 .prod_juegos h2 {
-  padding: 20px 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.prod_juegos #contenedor-juegos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.prod_juegos .img_jg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+  background-color: rgb(13, 32, 51);
+  border-radius: 15px;
+  width: 200px;
+  height: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+  align-content: space-around;
+}
+.prod_juegos .img_jg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(4, 217, 255, 0.71);
+}
+.prod_juegos .img_jg img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: transparent;
+  border-radius: 15px 15px 0 0;
+  margin: 0;
+}
+.prod_juegos .img_jg h4 {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  min-height: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.prod_juegos .img_jg .precio {
+  background-color: rgb(10, 20, 29);
+  margin: 10px;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.prod_juegos .img_jg .comprar {
+  display: none;
+}
+.prod_juegos .img_jg:hover .comprar {
+  display: block;
+  background-color: rgba(4, 217, 255, 0.808);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(4, 217, 255, 0.71);
+  transform: scale(1.05);
+}
+.prod_juegos .img_jg:hover .comprar .comprar {
+  display: block;
+}
+.prod_juegos .img_jg:hover .precio {
+  display: none;
+}
+
+.prod_carrusel {
+  max-width: 510px;
 }
 
 .pr_jg {
@@ -586,127 +668,13 @@ body {
   color: inherit;
 }
 
-.img_jg {
-  background-color: rgb(13, 32, 51);
-  max-width: 1200px;
-  max-height: 1500px;
-  display: flex;
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  justify-content: space-around;
-  align-items: center;
-  margin: 10px 0px;
-  border-radius: 15px 15px 0px 0px;
-}
-@media (min-width: 1024px) {
-  .img_jg {
-    height: 150px;
-    padding: 0rem 1rem;
-  }
-}
-.img_jg .comprar {
-  display: none;
-}
-.img_jg:hover {
-  transform: scale(1.1);
-  transition-duration: 1s;
-  box-shadow: 1px 0px 36px 16px rgba(4, 217, 255, 0.71);
-  -webkit-box-shadow: 1px 0px 36px 16px rgba(4, 217, 255, 0.71);
-  -moz-box-shadow: 1px 0px 36px 16px rgba(4, 217, 255, 0.71);
-}
-.img_jg:hover .comprar {
-  color: rgb(239, 239, 239);
-  background-color: rgba(4, 217, 255, 0.808);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(4, 217, 255, 0.71);
-  width: 80%;
-  max-width: 200px;
-  height: auto;
-  margin: auto;
-}
-@media (min-width: 1024px) {
-  .img_jg:hover .comprar {
-    width: 50%;
-    height: 10%;
-    margin: auto;
-  }
-}
-.img_jg:hover .precio {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .img_jg:hover {
-    transform: scale(1.1);
-  }
-}
-@media (min-width: 1024px) {
-  .img_jg {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 200px;
-    max-height: 500px;
-    width: 200px;
-    height: 500px;
-    background-color: rgb(13, 32, 51);
-    margin: 1rem;
-    padding: none;
-  }
-}
-.img_jg img {
-  width: 100px;
-  height: 100px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  flex-shrink: 0;
-  border-radius: 15px 15px 0px 0px;
-}
-@media (min-width: 1024px) {
-  .img_jg img {
-    width: 200px;
-    height: 300px;
-  }
-}
-.img_jg h4 {
-  color: rgb(255, 255, 255);
-  width: 100%;
-  height: auto;
-  margin: 1vw;
-  font-size: 1rem;
-}
-@media (min-width: 1024px) {
-  .img_jg h4 {
-    margin: none;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    padding: 0px 0px;
-  }
-}
-.img_jg p {
-  color: rgb(239, 239, 239);
-  background-color: rgb(10, 26, 42);
-  width: auto;
-  height: auto;
-  margin: 1rem;
-}
-@media (min-width: 1024px) {
-  .img_jg p {
-    width: 50%;
-    height: 10%;
-    margin: auto;
-  }
-}
-
 .mostrar_todo {
   margin: 1rem;
 }
 
 .carousel {
   width: 100%;
+  max-width: 510px;
   margin-bottom: 2rem;
   z-index: 1;
   margin: 0 auto;
@@ -719,7 +687,8 @@ body {
 }
 
 .carousel-item img {
-  height: auto;
+  max-width: 420px;
+  max-height: 220px;
   display: block;
   margin: 0 auto;
 }
@@ -833,6 +802,110 @@ body {
 
 #modalGlobalAddBtn:hover {
   background-color: rgba(4, 217, 255, 0.71);
+}
+
+.checkout-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 100%;
+  height: 100%;
+  background-color: rgb(13, 32, 51);
+  color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1055;
+  display: none;
+  overflow-y: auto;
+  transition: right 1s ease;
+}
+.checkout-panel.visible {
+  right: 0;
+  display: block;
+}
+.checkout-panel .checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(4, 217, 255, 0.3);
+}
+.checkout-panel .checkout-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.checkout-panel .checkout-header .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+.checkout-panel .checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkout-panel .checkout-form label {
+  font-weight: bold;
+  color: white;
+}
+.checkout-panel .checkout-form input,
+.checkout-panel .checkout-form select {
+  padding: 10px;
+  background-color: rgb(10, 20, 29);
+  border: 1px solid rgba(4, 217, 255, 0.71);
+  border-radius: 4px;
+  color: white;
+}
+.checkout-panel .checkout-form input:focus,
+.checkout-panel .checkout-form select:focus {
+  outline: none;
+  border-color: rgba(55, 225, 255, 0.71);
+}
+.checkout-panel .checkout-form button[type=submit] {
+  margin-top: 15px;
+  background-color: rgba(14, 190, 102, 0.8);
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.checkout-panel .checkout-form button[type=submit]:hover {
+  background-color: rgba(18, 238, 128, 0.8);
+}
+.checkout-panel .checkout-form .btn-success {
+  background-color: rgba(14, 190, 102, 0.8);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.checkout-panel .checkout-form .btn-success:hover {
+  background-color: rgba(18, 238, 128, 0.8);
+}
+.checkout-panel .checkout-form .btn-cancelar {
+  background-color: rgba(255, 82, 82, 0.8);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.checkout-panel .checkout-form .btn-cancelar:hover {
+  background-color: rgba(255, 133, 133, 0.8);
 }
 
 .pie_pagina {
