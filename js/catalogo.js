@@ -1,5 +1,5 @@
 const contenedor = document.getElementById("contenedor-juegos");
-const URL = "../db/juegos.json";
+const URL = "./db/juegos.json";
 let juegos = [];
 
 function obtenerJuegos() {
