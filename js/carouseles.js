@@ -19,10 +19,6 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
       img.className = "d-block w-100";
       img.alt = juego.titulo;
 
-      const link = document.createElement("a");
-      link.href = "#";
-      link.target = "_blank";
-
       const caption = document.createElement("div");
       caption.className = "carousel-caption d-md-block texto_carousel";
 
@@ -41,10 +37,9 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
       caption.appendChild(h5);
       caption.appendChild(pPrecio);
       caption.appendChild(pComprar);
-      link.appendChild(caption);
 
       item.appendChild(img);
-      item.appendChild(link);
+      item.appendChild(caption); // Ya no se envuelve en un <a>
       inner.appendChild(item);
 
       const indicator = document.createElement("button");
@@ -61,11 +56,8 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
   }
 }
 
-
-const URL_CARRUSELES = `${location.origin}/CH_js/db/carouseles.json`;
-
 function obtenerCarouseles() {
-  fetch(URL_CARRUSELES)
+  fetch("./db/carouseles.json")
     .then((response) => response.json())
     .then((data) => {
       window.carouseles = data;

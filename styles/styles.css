@@ -740,6 +740,7 @@ body {
   width: auto;
   height: auto;
   margin: auto;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .texto_carousel:hover .comprar {

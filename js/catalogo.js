@@ -1,10 +1,9 @@
 const contenedor = document.getElementById("contenedor-juegos");
-const URL = `${location.origin}/CH_js/db/juegos.json`;
 let juegos = [];
 
 function obtenerJuegos() {
   try {
-    fetch(URL)
+    fetch("./db/juegos.json")
       .then((response) => {
         if (!response.ok) throw new Error("Error al cargar los juegos");
         return response.json();

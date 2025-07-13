@@ -280,6 +280,7 @@
             width: auto;
             height: auto;
             margin: auto;
+            cursor: pointer;
             @include mediaquery1024{
                 width: 50%;
                 height: auto;
