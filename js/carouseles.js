@@ -39,7 +39,7 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
       caption.appendChild(pComprar);
 
       item.appendChild(img);
-      item.appendChild(caption); // Ya no se envuelve en un <a>
+      item.appendChild(caption);
       inner.appendChild(item);
 
       const indicator = document.createElement("button");
