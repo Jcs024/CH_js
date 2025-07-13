@@ -1,5 +1,5 @@
 const contenedor = document.getElementById("contenedor-juegos");
-const URL_CARRUSELES = `${location.origin}/CH_js/db/juegos.json`;
+const URL = `${location.origin}/CH_js/db/juegos.json`;
 let juegos = [];
 
 function obtenerJuegos() {
