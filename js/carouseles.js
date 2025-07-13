@@ -62,7 +62,7 @@ function generarCarrusel({ id, juegos, rutaImagen }) {
 }
 
 
-const URL_CARRUSELES = "./db/carouseles.json";
+const URL_CARRUSELES = `${location.origin}/CH_js/db/carouseles.json`;
 
 function obtenerCarouseles() {
   fetch(URL_CARRUSELES)
